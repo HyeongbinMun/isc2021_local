@@ -46,6 +46,7 @@ docker exec -it [CONTAINER_NAME] bash
 
 3. 환경 세팅
 
+ - 패키지 설치
 ```python
 conda create -n isc2021 python=3.8 -y && conda activate isc2021
 pip install -e workspace/
@@ -55,7 +56,6 @@ conda install -c pytorch faiss-gpu
 ```python
 export PYTHONPATH="baselines/asmk:baselines/cnnimageretrieval-pytorch-1.2:baselines/how:$PYTHONPATH"
 
- - Install the cirtorch package (see cirtorch github for details)
 # cirtorch
 wget "https://github.com/filipradenovic/cnnimageretrieval-pytorch/archive/v1.2.zip"
 unzip v1.2.zip
@@ -74,7 +74,4 @@ cd ..
 export PYTHONPATH=${PYTHONPATH}:$(realpath asmk)
  ```
 
- - 패키지 설치
-```python
-pip install -r requirements.txt
-```
+
