@@ -1,5 +1,5 @@
 certifi
-faiss
+faiss-gpu
 h5py
 matplotlib
 mkl-fft
