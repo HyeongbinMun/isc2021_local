@@ -1,37 +1,61 @@
 # ISC 2021
 
 This repository contains code for the Image Similarity Challenge 2021.
+origin git : https://github.com/facebookresearch/isc2021
 
-## Getting started 
+## Installation
+환경 설정은 docker를 통해 구현하였으며 환경 설정을 하기 위해서는 아래와 같은 패키지 설치가 필요하다.
 
-The [docs](docs) subdirectory has step-by-step instructions on how to reproduce the baseline 
-results from the paper. 
+docker 환경 : cuda : 11.6.1 / cudnn : 8.0 / ubuntu : 20.04
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* [Docker-compose](https://docs.docker.com/compose/install/)
+* [Nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
-Update (2022-02-08): The data is publicly available at: https://sites.google.com/view/isc2021/dataset
+1. 해당 패키지 설치 후 docker.compose.yml 파일에서 볼륨 및 포트 변경
 
-## Reference paper
-
-The competition is described in this paper:  https://arxiv.org/abs/2106.09672
-
-BibTeX reference:
-```bibtex
-@ARTICLE{ISC2021,
-       author = {
-       Matthijs Douze and Giorgos Tolias and Zo\"e Papakipos and Ed Pizzi and 
-       Lowik Chanussot and Filip Radenovic and Tomas Jenicek and 
-       Maxim Maximov and Laura Leal-Taix\'e and Ismail Elezi and 
-       Ondřej Chum and Cristian Canton Ferrer       
-       },
-        title = "{The 2021 Image Similarity Dataset and Challenge}",
-      journal = {arXiv e-prints},
-         year = "2021",
-}
+```python
+# : 기준으로 앞쪽이 자신의 로컬 directory, 뒤쪽이 생성되는 mount directory
+    volumes:
+      - "/media/mmlab/hdd:/hdd"  # 원하는 디렉토리로 수정
+      
+# 앞쪽의 25100 ~ 25103 부분의 변경 
+    ports:
+      - "25100:22"               # ssh port
+      - "25101:6006"             # tensorboard port
+      - "25102:8000"             # web port
+      - "25103:8888"             # jupyter port
+      
 ```
 
-## Contributing
-See the [CONTRIBUTING](CONTRIBUTING.md) file for how to help out.
+2. docker container 생성 및 접속
 
-## License
-ISC2021 is [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) licensed, as found in the LICENSE file.
+```python
+docker-compose up -d                # 생성
+docker attach [CONTAINER_NAME]      # 접속
+```
 
-The majority of ISC2021 is licensed under CC-BY-NC, however portions of the project are available under separate license terms: lear_gist1.2  is licensed under the PSF license.
+환경 변경 후 container 재적용 실행 command(단 이전의 작업이 날아갈 수 있음)
+```python
+docker-compose up -d --build
+```
+
+ssh port 접근 이외에 docker container 다중 접속
+```python
+docker exec -it [CONTAINER_NAME] bash
+```
+
+3. 환경 세팅
+```python
+export PYTHONPATH="baselines/asmk:baselines/cnnimageretrieval-pytorch-1.2:baselines/how:$PYTHONPATH"
+
+ - Install the cirtorch package (see cirtorch github for details)
+# cirtorch
+wget "https://github.com/filipradenovic/cnnimageretrieval-pytorch/archive/v1.2.zip"
+unzip v1.2.zip
+rm v1.2.zip
+export PYTHONPATH=${PYTHONPATH}:$(realpath cnnimageretrieval-pytorch-1.2)
+```
+ - Install the asmk package with dependencies (see asmk github for details)
+ ```python
+ 
+ ```
