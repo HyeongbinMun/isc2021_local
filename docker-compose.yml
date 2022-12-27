@@ -1,0 +1,33 @@
+version: '2.3'
+  
+services:
+  main:
+    container_name: isc2022
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    runtime: nvidia
+    restart: always
+    volumes:
+      - type: volume
+        source: nfs_shared
+        target: /nfs_shared
+        volume:
+          nocopy: true
+      - "/media/mmlab/hdd:/hdd"
+    expose:
+      - "8000"
+    ports:
+      - "14300:22"
+      - "14301:6006"
+      - "14302:8000"
+    ipc: host
+    stdin_open: true
+    tty: true
+
+volumes:
+  nfs_shared:
+    driver_opts:
+      type: "nfs"
+      o: "addr=mldisk.sogang.ac.kr,nolock,soft,rw"
+      device: ":/volume2/nfs_shared"

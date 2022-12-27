@@ -1,0 +1,85 @@
+2022-12-27 18:59:46,647 HOW INFO: Downloading file 'how_r50-.pth'
+2022-12-27 19:00:34,772 HOW INFO: Starting asmk evaluation step 'train_codebook'
+2022-12-27 19:03:05,961 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 19:03:06,468 HOW INFO: Processing dataset 'subset_1_references'
+2022-12-27 19:16:51,034 HOW INFO: Finished asmk evaluation step 'aggregate_database' in 13 min
+2022-12-27 19:22:53,820 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 19:22:54,337 HOW INFO: Processing dataset 'subset_1_references'
+2022-12-27 19:22:54,338 HOW DEBUG: Step results already exist
+2022-12-27 19:22:54,745 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 19:23:16,988 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 19:23:17,519 HOW INFO: Processing dataset 'subset_1_references'
+2022-12-27 19:23:17,868 HOW DEBUG: Step results already exist
+2022-12-27 19:23:17,868 HOW INFO: Finished asmk evaluation step 'query_ivf' in 0 min
+2022-12-27 19:24:31,448 HOW INFO: Starting asmk evaluation step 'train_codebook'
+2022-12-27 19:27:41,026 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 19:27:41,534 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:41:36,754 HOW INFO: Finished asmk evaluation step 'aggregate_database' in 13 min
+2022-12-27 19:44:51,308 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 19:44:51,828 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:45:14,750 HOW INFO: Indexed '1_references.agg.pkl'
+2022-12-27 19:45:15,325 HOW DEBUG: IVF stats: {'vectors_per_image': 728.6505710278501, 'mean_entries_per_vw': 55.49156188964844, 'empty_vw': 1351, 'min_entries_per_vw': 0, 'max_entries_per_vw': 935, 'std_of_entries_per_vw': 76.26110512170821, 'imbalance_factor_of_vw': 2.8886535151111294}
+2022-12-27 19:45:15,390 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 19:45:25,618 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 19:45:26,137 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:45:26,137 HOW DEBUG: Step results already exist
+2022-12-27 19:45:26,137 HOW INFO: Finished asmk evaluation step 'aggregate_database' in 0 min
+2022-12-27 19:45:35,288 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 19:45:35,803 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:45:35,804 HOW DEBUG: Step results already exist
+2022-12-27 19:45:36,117 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 19:45:45,473 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 19:45:45,997 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:46:10,413 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 19:46:10,928 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:48:21,780 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 19:48:22,301 HOW INFO: Processing dataset '1_references'
+2022-12-27 19:48:22,301 HOW DEBUG: Step results already exist
+2022-12-27 19:48:22,614 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 19:57:32,544 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:01:44,480 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:01:45,011 HOW INFO: Processing dataset '1_references'
+2022-12-27 20:03:08,165 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 20:03:09,166 HOW INFO: Processing dataset '1_references'
+2022-12-27 20:03:09,166 HOW DEBUG: Step results already exist
+2022-12-27 20:03:09,167 HOW INFO: Finished asmk evaluation step 'aggregate_database' in 0 min
+2022-12-27 20:03:24,181 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 20:03:25,174 HOW INFO: Processing dataset '1_references'
+2022-12-27 20:03:25,174 HOW DEBUG: Step results already exist
+2022-12-27 20:03:25,511 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 20:03:33,735 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:03:34,261 HOW INFO: Processing dataset '1_references'
+2022-12-27 20:07:05,256 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:07:05,790 HOW INFO: Processing dataset 'references'
+2022-12-27 20:07:26,827 HOW INFO: Starting asmk evaluation step 'train_codebook'
+2022-12-27 20:07:35,345 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 20:07:36,334 HOW INFO: Processing dataset 'references'
+2022-12-27 20:09:10,714 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 20:09:11,230 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 20:22:49,814 HOW INFO: Finished asmk evaluation step 'aggregate_database' in 13 min
+2022-12-27 20:25:43,612 HOW INFO: Starting asmk evaluation step 'build_ivf'
+2022-12-27 20:25:44,130 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 20:26:06,096 HOW INFO: Indexed 'subset_references.agg.pkl'
+2022-12-27 20:26:06,666 HOW DEBUG: IVF stats: {'vectors_per_image': 728.6505710278501, 'mean_entries_per_vw': 55.49156188964844, 'empty_vw': 1351, 'min_entries_per_vw': 0, 'max_entries_per_vw': 935, 'std_of_entries_per_vw': 76.26110512170821, 'imbalance_factor_of_vw': 2.8886535151111294}
+2022-12-27 20:26:06,731 HOW INFO: Finished asmk evaluation step 'build_ivf' in 0 min
+2022-12-27 20:28:58,170 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:28:58,718 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 20:29:53,301 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:30:52,639 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:30:53,167 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 20:43:39,915 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:43:40,431 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 20:45:45,004 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 20:45:45,552 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 21:08:16,561 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 21:08:17,076 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 21:08:43,885 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 21:38:42,290 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 21:38:42,833 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 21:39:02,640 HOW INFO: Starting asmk evaluation step 'query_ivf'
+2022-12-27 21:39:03,180 HOW INFO: Processing dataset 'subset_references'
+2022-12-27 21:42:20,665 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 21:43:28,885 HOW INFO: Starting asmk evaluation step 'train_codebook'
+2022-12-27 21:44:16,301 HOW INFO: Starting asmk evaluation step 'train_codebook'
+2022-12-27 21:45:00,740 HOW INFO: Starting asmk evaluation step 'aggregate_database'
+2022-12-27 21:45:01,303 HOW INFO: Processing dataset 'final_references'

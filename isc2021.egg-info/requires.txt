@@ -1,0 +1,12 @@
+certifi
+h5py==3.2.1
+matplotlib
+mkl-fft
+mkl-random
+mkl-service
+numpy
+Pillow>=8.3.2
+six
+torch==1.9.0
+torchvision==0.10.0
+typing-extensions==3.10.0.0
