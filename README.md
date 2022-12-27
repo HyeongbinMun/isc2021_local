@@ -66,7 +66,7 @@ export PYTHONPATH=${PYTHONPATH}:$(realpath cnnimageretrieval-pytorch-1.2)
  - Install the asmk package with dependencies (see asmk github for details)
 ```python
  # asmk
-pip3 install pyaml numpy faiss-gpu
+git clone https://github.com/jenicek/asmk.git
 cd asmk
 python3 setup.py build_ext --inplace
 rm -r build
