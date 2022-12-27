@@ -64,7 +64,7 @@ export PYTHONPATH=${PYTHONPATH}:$(realpath cnnimageretrieval-pytorch-1.2)
 ```
 
  - Install the asmk package with dependencies (see asmk github for details)
- ```python
+```python
  # asmk
 pip3 install pyaml numpy faiss-gpu
 cd asmk
@@ -74,4 +74,54 @@ cd ..
 export PYTHONPATH=${PYTHONPATH}:$(realpath asmk)
  ```
 
+4. 학습
 
+ - train
+```python 
+python baselines/how/examples/demo_how.py \
+    train \
+    examples/params/eccv20/train_how_r18.yml -e train_how_r18
+```
+
+5. 평가
+ - eval
+```python 
+python baselines/how/examples/demo_how.py \
+    eval \
+    baselines/how_r50-_2000.yml \
+    --step train_codebook
+```
+```python 
+python baselines/how/examples/demo_how.py \
+    eval \
+    baselines/how_r50-_2000.yml \
+    --datasets-local '[{"name": "final_references", "image_root": "/workspace/images/references/*.jpg", "query_list": null, "database_list": "/workspace/list_files/final_references"}]' \
+    --step aggregate_database
+```
+```python 
+python baselines/how/examples/demo_how.py \
+    eval \
+    baselines/how_r50-_2000.yml \
+    --datasets-local '[{"name": "final_references", "image_root": "/workspace/images/references/*.jpg", "query_list": null, "database_list": "/workspace/list_files/final_references"}]' \
+    --step build_ivf
+```
+```python 
+python baselines/how/examples/demo_how.py \
+    eval \
+    baselines/how_r50-_2000.yml \
+    --datasets-local '[{"name": "final_references", "image_root": "/workspace/images/final_queries/*.jpg", "query_list": "/workspace/list_files/final_queries", "database_list": null}]' \
+    --step query_ivf
+```
+```python 
+python baselines/how_find_matches.py \
+    baselines/how_r50-_2000.yml \
+    1_references \
+    --query_list list_files/final_queries \
+    --db_list list_files/subset_1_references \
+    --preds_filepath data/predictions_how_final_1.csv
+```
+```python 
+python scripts/compute_metrics.py \
+    --gt_filepath list_files/subset_1_ground_truth.csv \
+    --preds_filepath data/predictions_how_final_1.csv
+```
