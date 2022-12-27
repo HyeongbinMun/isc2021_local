@@ -45,6 +45,13 @@ docker exec -it [CONTAINER_NAME] bash
 ```
 
 3. 환경 세팅
+
+```python
+conda create -n isc2021 python=3.8 -y && conda activate isc2021
+pip install -e workspace/
+conda install -c pytorch faiss-gpu
+```
+
 ```python
 export PYTHONPATH="baselines/asmk:baselines/cnnimageretrieval-pytorch-1.2:baselines/how:$PYTHONPATH"
 
@@ -55,7 +62,19 @@ unzip v1.2.zip
 rm v1.2.zip
 export PYTHONPATH=${PYTHONPATH}:$(realpath cnnimageretrieval-pytorch-1.2)
 ```
+
  - Install the asmk package with dependencies (see asmk github for details)
  ```python
- 
+ # asmk
+pip3 install pyaml numpy faiss-gpu
+cd asmk
+python3 setup.py build_ext --inplace
+rm -r build
+cd ..
+export PYTHONPATH=${PYTHONPATH}:$(realpath asmk)
  ```
+
+ - 패키지 설치
+```python
+pip install -r requirements.txt
+```
